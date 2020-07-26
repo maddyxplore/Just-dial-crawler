@@ -1,10 +1,12 @@
 import bs4
-import pickle
 import json
 from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException
 import time
-browser = webdriver.Firefox(executable_path="C:\\Users\\madhan\\Documents\\py automation\\geckodriver-v0.26.0-win64\\geckodriver.exe")
+from selenium.webdriver.firefox.options import Options
+
+options = Options()
+options.headless = True
+browser = webdriver.Firefox(options=options,executable_path="C:\\Users\\madhan\\Documents\\py automation\\geckodriver-v0.26.0-win64\\geckodriver.exe")
 print("Getting started with browser....")
 browser.get("https://www.justdial.com/Delhi/House-On-Rent/nct-10192844")
 time.sleep(10)
